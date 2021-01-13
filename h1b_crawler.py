@@ -27,9 +27,8 @@ for i in range(n_year):
 
 raw_data = []
 
-def insert_data(): # This function append each Tract as a dictionary to the "data_dic" list, whcih latter used to build a datafrmae
+def insert_data(): 
     for i in range(len(url_list)):
-    #for i in range(3):
         r = urllib.request.urlopen(url_list[i]) 
         soup = bs.BeautifulSoup(r, 'html.parser')
         main_table = soup.find_all("table", {"id":"myTable"})   #the table contains the main content
